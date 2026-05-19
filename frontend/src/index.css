@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Raleway:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* ───── COLORS (cosmic purple theme) ───── */
+  --text: #ccc8dc;
+  --text-h: #f0eeff;
+
+  --bg: #0a0a14;
+  --paper: #10101e;
+
+  --border: rgba(192,132,252,0.1);
+
+  --accent: #c084fc;
+  --accent-soft: rgba(192,132,252,0.12);
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+  /* ───── TYPO ───── */
+  --sans: 'Raleway', system-ui, sans-serif;
+  --heading: 'Orbitron', sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/150% var(--sans);
+  letter-spacing: 0.3px;
+
+  color: var(--text);
+  background: var(--bg);
+
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+
+  border-inline: 1px solid var(--border);
+  background: radial-gradient(
+    circle at top,
+    rgba(192,132,252,0.05),
+    transparent 60%
+  );
+}
+
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(192,132,252,0.08);
+  border: 1px solid rgba(192,132,252,0.15);
+}
+
+/* ───── NOISE TEXTURE ───── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+/* ───── SMOOTH FEEL ───── */
+button {
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192,132,252,0.3);
+}
+
+/* ───── INPUT FOCUS ───── */
+input:focus {
+  border-color: rgba(192,132,252,0.5) !important;
+  box-shadow: 0 0 0 3px rgba(192,132,252,0.1);
+}

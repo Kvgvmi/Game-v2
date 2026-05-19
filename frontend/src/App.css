@@ -1,0 +1,167 @@
+/* ───── GLOBAL GAME UI ───── */
+
+.counter {
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  color: #a48df5;
+  background: rgba(139,111,223,0.15);
+
+  border: 1px solid rgba(160,140,255,0.12);
+
+  transition: 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.counter:hover {
+  transform: translateY(-1px);
+  border-color: #8b6fdf;
+}
+
+/* ───── HERO ───── */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero .base {
+  width: 160px;
+  opacity: 0.9;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+}
+
+.hero .framework,
+.hero .vite {
+  display: none;
+}
+
+/* ───── CENTER LAYOUT (GAME SCREEN) ───── */
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* ───── NEXT STEPS → cards ───── */
+
+#next-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  border-top: 1px solid rgba(160,140,255,0.1);
+  padding-top: 20px;
+}
+
+#next-steps > div {
+  padding: 16px;
+  border-radius: 14px;
+
+  background: rgba(100,80,200,0.04);
+  border: 1px solid rgba(160,140,255,0.08);
+
+  transition: 0.2s ease;
+}
+
+#next-steps > div:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139,111,223,0.3);
+}
+
+/* icon */
+#next-steps .icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* ───── DOCS SECTION ───── */
+
+#docs {
+  border-right: none;
+}
+
+/* ───── LINKS LIST → BUTTON CARDS ───── */
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#next-steps ul a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: var(--text-h);
+  background: rgba(100,80,200,0.04);
+
+  border: 1px solid rgba(160,140,255,0.08);
+
+  transition: 0.2s ease;
+}
+
+#next-steps ul a:hover {
+  transform: translateY(-2px);
+  border-color: #8b6fdf;
+}
+
+/* ───── SPACER ───── */
+
+#spacer {
+  height: 60px;
+  opacity: 0.3;
+}
+
+/* ───── TICKS ───── */
+
+.ticks {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: rgba(160,140,255,0.1);
+}
+
+.ticks::before,
+.ticks::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: #8b6fdf;
+  border-radius: 50%;
+}
+
+.ticks::before {
+  left: 0;
+}
+
+.ticks::after {
+  right: 0;
+}
